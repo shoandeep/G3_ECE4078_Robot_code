@@ -98,7 +98,7 @@ class AlphaBot(object):
 			self.PWMB.ChangeDutyCycle(0 - right)
 
 	def setBuzzer(self, bool_buzz):
-		if (bool_buzz==1):
+		if (bool_buzz==True):
 			GPIO.output(self.BUZ,GPIO.HIGH)
 		else:
 			GPIO.output(self.BUZ,GPIO.LOW)
@@ -107,7 +107,10 @@ class AlphaBot(object):
 if __name__=='__main__':
 
 	Ab = AlphaBot()
-	Ab.forward()
+	# Ab.forward()
+	Ab.setBuzzer(True)
+	time.sleep(0.2)
+	Ab.setBuzzer(False)
 	try:
 		while True:
 			time.sleep(1)

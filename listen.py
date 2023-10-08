@@ -38,7 +38,15 @@ def set_velocity():
 @app.get('/buzzer/set')
 def set_buzzer():
     buzz_logic = request.query.value.split(',')
-    app.bot.setBuzzer(bool(buzz_logic))
+    print(buzz_logic)
+    if(buzz_logic[0] == 'True'):
+        logic = True
+        #print(True)
+    else:
+        logic = False
+        #print(False)
+
+    app.bot.setBuzzer(logic)
 
 s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 s.connect(('8.8.8.8',80))
