@@ -51,8 +51,8 @@ def set_buzzer():
 @app.get('/servo/set')
 def set_buzzer():
     servo_str = request.query.value.split(',')
-    print(servo_str)
-    app.bot.servo(input_pulse = int(servo_str))
+    print(f"Servo input: {servo_str[0]}")
+    app.bot.servo(input_pulse = int(servo_str[0]))
     
 s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 s.connect(('8.8.8.8',80))
