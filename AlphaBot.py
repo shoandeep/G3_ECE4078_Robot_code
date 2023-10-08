@@ -18,6 +18,8 @@ class AlphaBot(object):
 
 		GPIO.setmode(GPIO.BCM)
 		GPIO.setwarnings(False)
+		GPIO.setup(self.BUZ,GPIO.OUT)
+		
 		GPIO.setup(self.IN1,GPIO.OUT)
 		GPIO.setup(self.IN2,GPIO.OUT)
 		GPIO.setup(self.IN3,GPIO.OUT)
