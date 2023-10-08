@@ -48,6 +48,12 @@ def set_buzzer():
 
     app.bot.setBuzzer(logic)
 
+@app.get('/servo/set')
+def set_buzzer():
+    servo_str = request.query.value.split(',')
+    print(servo_str)
+    app.bot.servo(input_pulse = int(servo_str))
+    
 s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 s.connect(('8.8.8.8',80))
 localhost=s.getsockname()[0]
