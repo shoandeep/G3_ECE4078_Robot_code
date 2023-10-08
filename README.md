@@ -1,2 +1,6 @@
 # ECE4078-Robot_code
-code for improving on commands that operate the Alphabot2 remotely over wifi
+
+This are modified code to enable the AlphaBot2 to operate it's buzzer and servo over wifi for ECE4078 
+Original code: https://github.com/clow0003/ECE4078_MY_Lab_2022
+
+
