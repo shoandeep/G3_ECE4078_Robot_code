@@ -37,7 +37,7 @@ def set_velocity():
         
 @app.get('/buzzer/set')
 def set_buzzer():
-    buzz_logic = request.query.value.split(',')
+    buzz_logic = request.query.value
     print(buzz_logic)
     if(buzz_logic[0] == 'True'):
         logic = True
